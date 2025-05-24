@@ -1,0 +1,608 @@
+ 
+<!DOCTYPE html> 
+<html lang="en"> 
+    <head> 
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>Clarity Systems Studio | Studio-Grade Digital Experiences</title>         
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"> 
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css"> 
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet"> 
+        <style>:root { --primary: #0a0a0a; --secondary: #0d0d0d; --accent: #00a2ff; --accent-glow: #00c8ff; --text: #f0f0f0; --text-secondary: #adbac7; --gold: #D4AF37; --gold-light: #f1dfa7; } body { font-family: 'Poppins', sans-serif; background-color: var(--primary); color: var(--text); line-height: 1.6; padding-top: 80px; overflow-x: hidden; } h1, h2, h3, h4, h5 { font-family: 'Playfair Display', serif; } /* Enhanced Background Animations */.animated-background { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: -1; overflow: hidden; } .floating-shapes { position: absolute; width: 100%; height: 100%; } .floating-shape { position: absolute; opacity: 0.1; animation: float 20s infinite linear; } .shape-1 { width: 40px; height: 40px; background: linear-gradient(45deg, var(--gold), var(--accent)); border-radius: 50%; top: 20%; left: 10%; animation-delay: 0s; animation-duration: 25s; } .shape-2 { width: 60px; height: 20px; background: linear-gradient(45deg, var(--accent), var(--gold)); border-radius: 30px; top: 50%; left: 80%; animation-delay: 5s; animation-duration: 30s; } .shape-3 { width: 30px; height: 30px; background: linear-gradient(135deg, var(--gold), transparent); transform: rotate(45deg); top: 70%; left: 15%; animation-delay: 10s; animation-duration: 20s; } .shape-4 { width: 50px; height: 50px; border: 2px solid var(--accent); border-radius: 50%; top: 30%; left: 70%; animation-delay: 15s; animation-duration: 35s; } .shape-5 { width: 25px; height: 25px; background: var(--gold); border-radius: 3px; top: 80%; left: 90%; animation-delay: 8s; animation-duration: 22s; } @keyframes float { 0% {  transform: translateY(100vh) rotate(0deg);  opacity: 0; }  10% {  opacity: 0.1; }  90% {  opacity: 0.1; }  100% {  transform: translateY(-100px) rotate(360deg);  opacity: 0; } } /* Gradient Orbs */.gradient-orb { position: absolute; border-radius: 50%; filter: blur(40px); opacity: 0.3; animation: pulse-move 15s infinite ease-in-out; } .orb-1 { width: 300px; height: 300px; background: radial-gradient(circle, var(--gold) 0%, transparent 70%); top: 10%; left: -10%; animation-delay: 0s; } .orb-2 { width: 200px; height: 200px; background: radial-gradient(circle, var(--accent) 0%, transparent 70%); top: 60%; right: -5%; animation-delay: 7s; } .orb-3 { width: 250px; height: 250px; background: radial-gradient(circle, var(--gold-light) 0%, transparent 70%); bottom: 20%; left: 60%; animation-delay: 14s; } @keyframes pulse-move { 0%, 100% {  transform: translateY(0px) scale(1);  opacity: 0.3; }  33% {  transform: translateY(-30px) scale(1.1);  opacity: 0.5; }  66% {  transform: translateY(20px) scale(0.9);  opacity: 0.2; } } /* Grid Pattern Animation */.grid-pattern { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: linear-gradient(rgba(212, 175, 55, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(212, 175, 55, 0.03) 1px, transparent 1px); background-size: 50px 50px; animation: grid-move 60s linear infinite; } @keyframes grid-move { 0% {  transform: translate(0, 0); }  100% {  transform: translate(50px, 50px); } } /* Enhanced gradients and effects */.gradient-text { background: linear-gradient(90deg, var(--gold), var(--gold-light)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; color: transparent; } .blue-glow-text { color: var(--accent); text-shadow: 0 0 10px rgba(0, 162, 255, 0.7); } .hero-gradient { background: linear-gradient(to bottom, rgba(5, 5, 5, 0.92), rgba(10, 10, 10, 1)),
+                        url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80'); background-size: cover; background-position: center; position: relative; overflow: hidden; } /* Advanced particle animation */.hero-particles { position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; z-index: 1; } .particle { position: absolute; width: 2px; height: 2px; border-radius: 50%; background: rgba(212, 175, 55, 0.3); animation: particles 8s infinite linear; } .particle:nth-child(1) { top: 20%; left: 15%; animation-delay: 0s; } .particle:nth-child(2) { top: 70%; left: 45%; animation-delay: 1s; } .particle:nth-child(3) { top: 40%; left: 75%; animation-delay: 2s; } .particle:nth-child(4) { top: 10%; left: 90%; animation-delay: 3s; } .particle:nth-child(5) { top: 50%; left: 10%; animation-delay: 4s; } .particle:nth-child(6) { top: 30%; left: 55%; animation-delay: 5s; } .particle:nth-child(7) { top: 80%; left: 35%; animation-delay: 6s; } .particle:nth-child(8) { top: 60%; left: 85%; animation-delay: 7s; } @keyframes particles { 0% {  transform: scale(0) translateY(0);  opacity: 0; }  50% {  opacity: 1; }  100% {  transform: scale(1.5) translateY(-100px);  opacity: 0; } } /* Enhanced glow effects for cards */.card { background-color: var(--secondary); border: 1px solid rgba(212, 175, 55, 0.18); transition: all 0.5s ease; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25); position: relative; overflow: hidden; z-index: 1; } .card::before { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(
+                circle at center,
+                rgba(212, 175, 55, 0.03) 0%,
+                rgba(0, 0, 0, 0) 70%
+            ); opacity: 0; z-index: -1; transition: opacity 0.5s ease; } .card:hover { transform: translateY(-8px); box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3), 0 0 15px rgba(212, 175, 55, 0.2); border: 1px solid rgba(212, 175, 55, 0.35); } .card:hover::before { opacity: 1; animation: pulse 2s infinite; } @keyframes pulse { 0% {  transform: scale(1); }  50% {  transform: scale(1.05); }  100% {  transform: scale(1); } } /* Refined section titles with animated underlines */.section-title { position: relative; display: inline-block; } .section-title::after { content: ""; display: block; width: 0; height: 3px; background: linear-gradient(90deg, var(--gold), var(--accent-glow)); margin-top: 10px; transition: width 1s ease; } .section-title.active::after { width: 100px; } /* Advanced category title with hover effect */.category-title { position: relative; padding-bottom: 15px; } .category-title::after { content: ""; position: absolute; bottom: 0; left: 0; width: 60px; height: 2px; background: var(--gold); transition: width 0.3s ease; } .category-title:hover::after { width: 100px; } /* Enhanced button styles */.btn-primary { background: linear-gradient(90deg, var(--gold), #c19d2e); color: #000; transition: all 0.4s ease; text-shadow: none; position: relative; overflow: hidden; z-index: 1; } .btn-primary::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,0.2), rgba(255,255,255,0)); transition: left 0.7s ease; z-index: -1; } .btn-primary:hover { background: linear-gradient(90deg, #c19d2e, var(--gold)); transform: translateY(-3px); box-shadow: 0 7px 20px rgba(212, 175, 55, 0.4); } .btn-primary:hover::before { left: 100%; } .btn-outline { border: 2px solid var(--gold); color: var(--gold); transition: all 0.4s ease; position: relative; overflow: hidden; z-index: 1; } .btn-outline::after { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, rgba(212,175,55,0.1), rgba(212,175,55,0.2), rgba(212,175,55,0.1)); transition: left 0.7s ease; z-index: -1; } .btn-outline:hover { background-color: rgba(212, 175, 55, 0.15); color: var(--gold-light); box-shadow: 0 0 20px rgba(212, 175, 55, 0.3); } .btn-outline:hover::after { left: 100%; } /* Enhanced label styles */.label { background-color: rgba(0, 162, 255, 0.12); color: var(--accent-glow); border: 1px solid rgba(0, 162, 255, 0.35); display: inline-block; padding: 0.2rem 0.7rem; border-radius: 20px; font-size: 0.75rem; font-weight: 500; margin-bottom: 0.75rem; box-shadow: 0 0 15px rgba(0, 162, 255, 0.25); } .label-gold { background-color: rgba(212, 175, 55, 0.12); color: var(--gold); border: 1px solid rgba(212, 175, 55, 0.35); display: inline-block; padding: 0.2rem 0.7rem; border-radius: 20px; font-size: 0.75rem; font-weight: 500; margin-bottom: 0.75rem; box-shadow: 0 0 15px rgba(212, 175, 55, 0.25); } /* Enhanced project image card */.project-card { position: relative; overflow: hidden; border-radius: 12px; background: #0d0d0d; transition: all 0.5s ease; margin-bottom: 0; height: 350px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); } .project-image { width: 100%; height: 100%; background-position: center; background-size: cover; background-repeat: no-repeat; transition: all 0.4s ease; } .project-card:hover .project-image { transform: scale(1.05); } .project-overlay { position: absolute; bottom: 0; left: 0; width: 100%; padding: 2rem 1.5rem 1.5rem; background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.7) 70%, transparent 100%); transform: translateY(100%); opacity: 0; transition: all 0.4s ease; } .project-card:hover .project-overlay { transform: translateY(0); opacity: 1; } .project-title { font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem; color: white; } .project-description { font-size: 0.9rem; margin-bottom: 1rem; color: #e2e8f0; opacity: 0.9; } /* Demo button enhancement */.demo-btn { display: inline-flex; align-items: center; padding: 0.5rem 1rem; background: rgba(0,0,0,0.5); border: 1px solid var(--gold); color: var(--gold); border-radius: 6px; font-size: 0.875rem; transition: all 0.3s ease; text-decoration: none; } .demo-btn:hover { background: var(--gold); color: #000; transform: translateY(-2px); } .demo-btn i { margin-left: 0.5rem; transition: transform 0.3s ease; } .demo-btn:hover i { transform: translateX(3px); } /* Header shine animation */.header-shine { position: relative; overflow: hidden; } .header-shine::after { content: ''; position: absolute; top: 0; left: -100%; width: 50%; height: 100%; background: linear-gradient(90deg, 
+                rgba(255,255,255,0) 0%, 
+                rgba(255,255,255,0.03) 50%, 
+                rgba(255,255,255,0) 100%); transform: skewX(-25deg); animation: shine 8s infinite; } @keyframes shine { 0% {  left: -100%; }  20% {  left: 100%; }  100% {  left: 100%; } } /* Navigation link enhancements */.nav-link { position: relative; color: var(--text-secondary); transition: color 0.3s ease; } .nav-link:after { content: ''; position: absolute; width: 0; height: 2px; bottom: -4px; left: 0; background: linear-gradient(90deg, var(--gold), var(--accent)); transition: width 0.3s ease; } .nav-link:hover { color: var(--gold-light); } .nav-link:hover:after { width: 100%; } /* Enhanced shadows */.gold-shadow { box-shadow: 0 0 30px rgba(212, 175, 55, 0.2); } .blue-glow { box-shadow: 0 0 30px rgba(0, 162, 255, 0.25); } /* CTA Banner with animated gradient border */.cta-banner { background-color: rgba(13, 13, 13, 0.95); position: relative; overflow: hidden; z-index: 1; border-radius: 16px; box-shadow: 0 20px 40px rgba(0,0,0,0.4); } .cta-banner::before { content: ''; position: absolute; top: -2px; left: -2px; right: -2px; bottom: -2px; background: linear-gradient(45deg, 
+                var(--gold), 
+                var(--accent-glow), 
+                var(--gold), 
+                var(--accent-glow)); background-size: 400% 400%; z-index: -1; border-radius: 18px; animation: borderGradient 6s ease infinite; } @keyframes borderGradient { 0% {  background-position: 0% 50%; }  50% {  background-position: 100% 50%; }  100% {  background-position: 0% 50%; } } /* Mobile Menu Styles - Enhanced */.mobile-menu { position: fixed; top: 0; right: -100%; width: 75%; max-width: 300px; height: 100vh; background-color: rgba(0, 0, 0, 0.97); backdrop-filter: blur(15px); transition: right 0.3s ease-in-out; z-index: 999; padding: 5rem 2rem 2rem; display: flex; flex-direction: column; box-shadow: -5px 0 25px rgba(0, 0, 0, 0.6); } .mobile-menu.active { right: 0; } .mobile-menu-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.7); z-index: 998; opacity: 0; visibility: hidden; transition: opacity 0.3s ease; backdrop-filter: blur(3px); } .mobile-menu-overlay.active { opacity: 1; visibility: visible; } .mobile-menu-close { position: absolute; top: 1.5rem; right: 1.5rem; font-size: 1.5rem; color: var(--text); cursor: pointer; transition: color 0.2s ease; } .mobile-menu-close:hover { color: var(--gold); } .mobile-nav-link { display: block; padding: 1rem 0; font-size: 1.2rem; color: var(--text); border-bottom: 1px solid rgba(255, 255, 255, 0.1); transition: all 0.3s ease; } .mobile-nav-link:hover { color: var(--gold); padding-left: 0.5rem; } /* Enhanced fixed header with background blur */.header { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background-color: rgba(10, 10, 10, 0.95); backdrop-filter: blur(15px); box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3); transition: all 0.4s ease; height: 80px; display: flex; align-items: center; } .header.scrolled { height: 70px; background-color: rgba(5, 5, 5, 0.98); box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4); } /* Adjust hero section padding */.hero-section { padding-top: 7rem; position: relative; } /* Wave divider animation */.wave-divider { position: absolute; bottom: 0; left: 0; width: 100%; overflow: hidden; line-height: 0; } .wave-divider svg { position: relative; display: block; width: calc(100% + 1.3px); height: 70px; } .wave-divider .shape-fill { fill: var(--primary); } /* Animated scroll arrow */.scroll-arrow { position: absolute; bottom: 80px; left: 50%; transform: translateX(-50%); animation: scrollBounce 2s infinite; } @keyframes scrollBounce { 0%, 20%, 50%, 80%, 100% {  transform: translateX(-50%) translateY(0); }  40% {  transform: translateX(-50%) translateY(-10px); }  60% {  transform: translateX(-50%) translateY(-5px); } } /* Service Card Styles */.service-card { position: relative; overflow: hidden; transition: transform 0.5s ease, box-shadow 0.5s ease; z-index: 1; } .service-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(0, 162, 255, 0.15) 100%); opacity: 0; transition: opacity 0.5s ease; z-index: -1; } .service-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); } .service-card:hover::before { opacity: 1; } .service-icon { display: inline-flex; align-items: center; justify-content: center; width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(0, 162, 255, 0.2)); color: var(--gold); margin-bottom: 1.5rem; position: relative; overflow: hidden; } .service-icon::after { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle at center, rgba(212, 175, 55, 0.3), transparent 70%); opacity: 0; transition: opacity 0.5s ease; } .service-card:hover .service-icon::after { opacity: 1; animation: pulseLight 2s infinite; } @keyframes pulseLight { 0% {  transform: scale(0.8);  opacity: 0.5; }  50% {  transform: scale(1.2);  opacity: 0.2; }  100% {  transform: scale(0.8);  opacity: 0.5; } } /* Portfolio grid enhancements */.portfolio-grid { display: grid; grid-template-columns: repeat(1, 1fr); gap: 2.5rem; } @media (min-width: 640px) { .portfolio-grid {  grid-template-columns: repeat(2, 1fr); } } @media (min-width: 1024px) { .portfolio-grid {  grid-template-columns: repeat(3, 1fr); } } /* Fix for mobile button cut-off issues */@media (max-width: 640px) { .btn-primary, .btn-outline {  width: 100%;  max-width: 100%;  box-sizing: border-box;  white-space: normal;  padding-left: 1rem;  padding-right: 1rem; }  .card {  overflow: hidden; }  .card .p-6 {  padding: 1.25rem; } }</style>         
+    </head>     
+    <body> 
+        <!-- Animated Background -->         
+        <div class="animated-background"> 
+            <div class="grid-pattern"></div>             
+            <div class="floating-shapes"> 
+                <div class="floating-shape shape-1"></div>                 
+                <div class="floating-shape shape-2"></div>                 
+                <div class="floating-shape shape-3"></div>                 
+                <div class="floating-shape shape-4"></div>                 
+                <div class="floating-shape shape-5"></div>                 
+            </div>             
+            <div class="gradient-orb orb-1"></div>             
+            <div class="gradient-orb orb-2"></div>             
+            <div class="gradient-orb orb-3"></div>             
+        </div>         
+        <!-- Navigation -->         
+        <header class="header" id="navbar"> 
+            <div class="container mx-auto px-6"> 
+                <div class="flex justify-between items-center"> 
+                    <div class="flex items-center logo"> 
+                        <h1 class="text-xl md:text-2xl font-bold header-shine"> <span class="gradient-text">Clarity Systems</span> <span class="text-white">Studio</span> </h1> 
+                    </div>                     
+                    <nav class="hidden md:flex space-x-8"> <a href="#studio-grade-builds" class="nav-link transition-colors duration-300">Studio-Grade Builds</a> <a href="#services" class="nav-link transition-colors duration-300">Services</a> <a href="#approach" class="nav-link transition-colors duration-300">Approach</a> <a href="#testimonials" class="nav-link transition-colors duration-300">Client Success</a> <a href="#contact" class="nav-link transition-colors duration-300">Contact</a> 
+                    </nav>                     
+                    <button id="mobile-menu-button" class="md:hidden text-white text-xl focus:outline-none z-50"> <i class="fas fa-bars"></i> 
+                    </button>                     
+                </div>                 
+            </div>             
+        </header>         
+        <!-- Mobile Menu -->         
+        <div id="mobile-menu-overlay" class="mobile-menu-overlay"></div>         
+        <div id="mobile-menu" class="mobile-menu"> 
+            <div id="mobile-menu-close" class="mobile-menu-close"> <i class="fas fa-times"></i> 
+            </div>             <a href="#studio-grade-builds" class="mobile-nav-link">Studio-Grade Builds</a> <a href="#services" class="mobile-nav-link">Services</a> <a href="#approach" class="mobile-nav-link">Approach</a> <a href="#testimonials" class="mobile-nav-link">Client Success</a> <a href="#contact" class="mobile-nav-link">Contact</a> 
+        </div>         
+        <!-- Hero Section -->         
+        <section class="hero-gradient hero-section py-32 px-6 relative"> 
+            <!-- Animated particles -->             
+            <div class="hero-particles"> 
+                <div class="particle"></div>                 
+                <div class="particle"></div>                 
+                <div class="particle"></div>                 
+                <div class="particle"></div>                 
+                <div class="particle"></div>                 
+                <div class="particle"></div>                 
+                <div class="particle"></div>                 
+                <div class="particle"></div>                 
+            </div>             
+            <div class="container mx-auto relative z-10"> 
+                <div class="max-w-3xl mx-auto text-center"> 
+                    <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6"> 
+                    Studio-Grade Websites <span class="gradient-text">Engineered for Results</span> </h1> 
+                    <p class="text-xl text-gray-300 mb-10"> 
+                    Our bespoke website systems are crafted for brands that lead — not follow. 
+                    Built for real estate leaders, startup founders, and elite creatives. </p> 
+                    <div class="flex flex-col md:flex-row justify-center gap-6"> <a href="#contact" class="btn-primary py-4 px-10 rounded-full font-medium inline-block text-center"> 
+                        Book a Consultation </a> 
+                    </div>                     
+                </div>                 
+            </div>             
+            <!-- Animated scroll arrow -->             
+            <div class="scroll-arrow hidden md:block"> <i class="fas fa-chevron-down text-gold text-2xl opacity-80"></i> 
+            </div>             
+            <!-- Wave divider -->             
+            <div class="wave-divider"> 
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"> 
+                    <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>                     
+                </svg>                 
+            </div>             
+        </section>         
+        <!-- Studio-Grade Builds Section -->         
+        <section id="studio-grade-builds" class="py-24 px-6 bg-gradient-to-b from-primary to-secondary relative"> 
+            <div class="container mx-auto"> 
+                <div class="text-center mb-16"> 
+                    <h2 class="text-3xl md:text-5xl font-bold mb-6 section-title active">Featured Studio-Grade Builds</h2> 
+                    <p class="text-xl text-gray-300 max-w-3xl mx-auto"> 
+                    Explore our collection of premium digital experiences designed and built 
+                    for industry leaders who demand excellence and performance. </p> 
+                </div>                 
+                <div class="portfolio-grid"> 
+                    <!-- ClarityOS -->                     
+                    <div class="project-card gold-shadow"> 
+                        <div class="project-image" style="background-image: url('./images/clarity.png');"></div>                         
+                        <div class="project-overlay"> 
+                            <h3 class="project-title">ClarityOS</h3> 
+                            <p class="project-description">Intelligent platform for business operations</p> <a href="https://clarity-os-one.vercel.app/" target="_blank" class="demo-btn"> 
+                            Live Demo <i class="fas fa-arrow-right"></i> </a> 
+                        </div>                         
+                    </div>                     
+                    <!-- PulseHealth -->                     
+                    <div class="project-card gold-shadow"> 
+                        <div class="project-image" style="background-image: url('images/pulse.png');"></div>                         
+                        <div class="project-overlay"> 
+                            <h3 class="project-title">Pulse — Luxury Wellness</h3> 
+                            <p class="project-description">Immersive retreat experience crafted for rejuvenation, balance, and high-end client wellness.</p> <a href="https://pulsehealthfinalll.vercel.app" target="_blank" class="demo-btn">
+    Live Demo <i class="fas fa-arrow-right"></i></a> 
+                        </div>                         
+                    </div>                     
+                    <!-- Elevate -->                     
+                    <div class="project-card gold-shadow"> 
+                        <div class="project-image" style="background-image: url('images/elevate (2).png');"></div>                         
+                        <div class="project-overlay"> 
+                            <h3 class="project-title">Elevate</h3> 
+                            <p class="project-description">High end coaching system</p> <a href="https://elivate.vercel.app/" target="_blank" class="demo-btn"> 
+                            Live Demo <i class="fas fa-arrow-right"></i> </a> 
+                        </div>                         
+                    </div>                     
+                    <!-- VELAR -->                     
+                    <div class="project-card gold-shadow"> 
+                        <div class="project-image" style="background-image: url('images/velar.png');"></div>                         
+                        <div class="project-overlay"> 
+                            <h3 class="project-title">VELAR</h3> 
+                            <p class="project-description">Visionary architectural system</p>
+                            <p class="project-description">Visionary architectural system</p> <a href="https://velar-gules.vercel.app/" target="_blank" class="demo-btn"> 
+                            Live Demo <i class="fas fa-arrow-right"></i> </a> 
+                        </div>                         
+                    </div>                     
+                    <!-- Vista Film Production -->                     
+                    <div class="project-card gold-shadow"> 
+                        <div class="project-image" style="background-image: url('images/vista2.png');"></div>                         
+                        <div class="project-overlay"> 
+                            <h3 class="project-title">Vista Film Production</h3> 
+                            <p class="project-description">Immersive film and property branding with bold style</p> <a href="https://vistafilm.vercel.app/" target="_blank" class="demo-btn"> 
+                            Live Demo <i class="fas fa-arrow-right"></i> </a> 
+                        </div>                         
+                    </div>                     
+                    <!-- Prestige Edge Realty -->                     
+                    <div class="project-card gold-shadow"> 
+                        <div class="project-image" style="background-image: url('images/edge.png');"></div>                         
+                        <div class="project-overlay"> 
+                            <h3 class="project-title">Prestige Edge Realty</h3> 
+                            <p class="project-description">Luxury real estate platform with bespoke client portal</p> <a href="https://edge2-kappa.vercel.app/" target="_blank" class="demo-btn"> 
+                            Live Demo <i class="fas fa-arrow-right"></i> </a> 
+                        </div>                         
+                    </div>                     
+                    <!-- Nexus Capital -->                     
+                    <div class="project-card gold-shadow"> 
+                        <div class="project-image" style="background-image: url('images/nexus.png')"></div>                         
+                        <div class="project-overlay"> 
+                            <h3 class="project-title">Nexus Capital</h3> 
+                            <p class="project-description">Sophisticated financial services platform with analytics dashboard</p> <a href="https://nexcap.vercel.app/" target="_blank" class="demo-btn"> 
+                            Live Demo <i class="fas fa-arrow-right"></i> </a> 
+                        </div>                         
+                    </div>                     
+                    <!-- Celestia Wellness -->                     
+                    <div class="project-card gold-shadow"> 
+                        <div class="project-image" style="background-image: url('images/cilestia.png');"></div>                         
+                        <div class="project-overlay"> 
+                            <h3 class="project-title">Celestia Wellness</h3> 
+                            <p class="project-description">Premium retreat booking platform with immersive UX</p> <a href="https://cilestia.vercel.app/" target="_blank" class="demo-btn"> 
+                            Live Demo <i class="fas fa-arrow-right"></i> </a> 
+                        </div>                         
+                    </div>                     
+                    <!-- Maison Noire -->                     
+                    <div class="project-card gold-shadow"> 
+                        <div class="project-image" style="background-image: url('images/noir.png');"></div>                         
+                        <div class="project-overlay"> 
+                            <h3 class="project-title">Maison Noire</h3> 
+                            <p class="project-description">High-end culinary brand with reservation system</p> <a href="https://maisonnoire.vercel.app/" target="_blank" class="demo-btn"> 
+                            Live Demo <i class="fas fa-arrow-right"></i> </a> 
+                        </div>                         
+                    </div>                     
+                    <!-- Modula Storefront -->                     
+                    <div class="project-card gold-shadow"> 
+                        <div class="project-image" style="background-image: url('images/modula.png');"></div>                         
+                        <div class="project-overlay"> 
+                            <h3 class="project-title">Modula Storefront</h3> 
+                            <p class="project-description">Premium eCommerce platform with advanced product showcase</p> <a href="https://modula1.vercel.app/" target="_blank" class="demo-btn"> 
+                            Live Demo <i class="fas fa-arrow-right"></i> </a> 
+                        </div>                         
+                    </div>                     
+                    <!-- Botanica Naturals -->                     
+                    <div class="project-card gold-shadow"> 
+                        <div class="project-image" style="background-image: url('images/botanica2.png');"></div>                         
+                        <div class="project-overlay"> 
+                            <h3 class="project-title">Botanica Naturals</h3> 
+                            <p class="project-description">Upscale skincare brand with elegant product showcase</p> <a href="https://botanica-one.vercel.app/" target="_blank" class="demo-btn"> 
+                            Live Demo <i class="fas fa-arrow-right"></i> </a> 
+                        </div>                         
+                    </div>                     
+                    <!-- Vector Showroom -->                     
+                    <div class="project-card gold-shadow"> 
+                        <div class="project-image" style="background-image: url('images/vector.png');"></div>                         
+                        <div class="project-overlay"> 
+                            <h3 class="project-title">Vector Showroom</h3> 
+                            <p class="project-description">Creative agency platform with interactive portfolio system</p> <a href="https://vectorfinal.vercel.app/" target="_blank" class="demo-btn"> 
+                            Live Demo <i class="fas fa-arrow-right"></i> </a> 
+                        </div>                         
+                    </div>                     
+                </div>                 
+            </div>             
+        </section>         
+        <!-- Services Section -->         
+        <section id="services" class="py-28 px-6 bg-black bg-opacity-50 relative"> 
+            <div class="container mx-auto"> 
+                <div class="text-center mb-20"> 
+                    <h2 class="text-3xl md:text-5xl font-bold mb-8 section-title active">Exceptional Digital Experiences</h2> 
+                    <p class="text-xl text-gray-300 max-w-3xl mx-auto"> 
+                    We architect and build sophisticated digital experiences for elite brands demanding excellence. </p> 
+                </div>                 
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-6xl mx-auto"> 
+                    <!-- Service 1 -->                     
+                    <div class="service-card p-8 rounded-xl bg-secondary"> 
+                        <div class="service-icon"> <i class="fas fa-bezier-curve text-2xl"></i> 
+                        </div>                         
+                        <h3 class="text-xl font-bold mb-3">Strategic Design</h3> 
+                        <p class="text-gray-300"> 
+                        Purpose-built interfaces that align with your brand positioning and business objectives. We design systems, not just aesthetics. </p> 
+                    </div>                     
+                    <!-- Service 2 -->                     
+                    <div class="service-card p-8 rounded-xl bg-secondary"> 
+                        <div class="service-icon"> <i class="fas fa-code text-2xl"></i> 
+                        </div>                         
+                        <h3 class="text-xl font-bold mb-3">Performance Engineering</h3> 
+                        <p class="text-gray-300"> 
+                        Lightning-fast, meticulously crafted codebases built for scale, security, and flawless performance across all devices. </p> 
+                    </div>                     
+                    <!-- Service 3 -->                     
+                    <div class="service-card p-8 rounded-xl bg-secondary"> 
+                        <div class="service-icon"> <i class="fas fa-chart-line text-2xl"></i> 
+                        </div>                         
+                        <h3 class="text-xl font-bold mb-3">Conversion Architecture</h3> 
+                        <p class="text-gray-300"> 
+                        Sophisticated user journeys designed to convert visitors into customers with data-driven optimization. </p> 
+                    </div>                     
+                    <!-- Service 4 -->                     
+                    <div class="service-card p-8 rounded-xl bg-secondary"> 
+                        <div class="service-icon"> <i class="fas fa-layer-group text-2xl"></i> 
+                        </div>                         
+                        <h3 class="text-xl font-bold mb-3">Content Systems</h3> 
+                        <p class="text-gray-300"> 
+                        Flexible content management frameworks that give you complete control with zero technical complexity. </p> 
+                    </div>                     
+                    <!-- Service 5 -->                     
+                    <div class="service-card p-8 rounded-xl bg-secondary"> 
+                        <div class="service-icon"> <i class="fas fa-search text-2xl"></i> 
+                        </div>                         
+                        <h3 class="text-xl font-bold mb-3">SEO Dominance</h3> 
+                        <p class="text-gray-300"> 
+                        Built-in technical SEO that positions your brand for superior search visibility and organic traffic growth. </p> 
+                    </div>                     
+                    <!-- Service 6 -->                     
+                    <div class="service-card p-8 rounded-xl bg-secondary"> 
+                        <div class="service-icon"> <i class="fas fa-shield-alt text-2xl"></i> 
+                        </div>                         
+                        <h3 class="text-xl font-bold mb-3">Ongoing Excellence</h3> 
+                        <p class="text-gray-300"> 
+                        Comprehensive maintenance and enhancement services to ensure your digital presence evolves with your business. </p> 
+                    </div>                     
+                </div>                 
+            </div>             
+        </section>         
+        <!-- Approach Section -->         
+        <section id="approach" class="py-28 px-6 relative"> 
+            <div class="container mx-auto max-w-6xl"> 
+                <div class="text-center mb-20"> 
+                    <h2 class="text-3xl md:text-5xl font-bold mb-8 section-title active">Our Studio Process</h2> 
+                    <p class="text-xl text-gray-300 max-w-3xl mx-auto"> 
+                    A methodical approach combining strategic insight and technical excellence to deliver 
+                    exceptional digital experiences. </p> 
+                </div>                 
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-16"> 
+                    <div> 
+                        <div class="mb-16"> 
+                            <div class="flex items-center mb-6"> 
+                                <div class="w-14 h-14 rounded-full bg-gradient-to-r from-gold to-gold-light flex items-center justify-center text-black font-bold text-xl mr-6">1</div>                                 
+                                <h3 class="text-2xl font-bold">Strategic Discovery</h3> 
+                            </div>                             
+                            <p class="text-gray-300 pl-20"> 
+                            We immerse ourselves in understanding your brand positioning, target audience, and business objectives to establish the strategic foundation for your digital presence. </p> 
+                        </div>                         
+                        <div class="mb-16"> 
+                            <div class="flex items-center mb-6"> 
+                                <div class="w-14 h-14 rounded-full bg-gradient-to-r from-gold to-gold-light flex items-center justify-center text-black font-bold text-xl mr-6">2</div>                                 
+                                <h3 class="text-2xl font-bold">Experience Architecture</h3> 
+                            </div>                             
+                            <p class="text-gray-300 pl-20"> 
+                            Our team designs the optimal user journey and information architecture to ensure your audience engages with your content in a meaningful, conversion-focused way. </p> 
+                        </div>                         
+                        <div> 
+                            <div class="flex items-center mb-6"> 
+                                <div class="w-14 h-14 rounded-full bg-gradient-to-r from-gold to-gold-light flex items-center justify-center text-black font-bold text-xl mr-6">3</div>                                 
+                                <h3 class="text-2xl font-bold">Visual Design System</h3> 
+                            </div>                             
+                            <p class="text-gray-300 pl-20"> 
+                            We craft a comprehensive visual language that captures your brand essence while delivering an elegant, intuitive user experience across all touchpoints. </p> 
+                        </div>                         
+                    </div>                     
+                    <div> 
+                        <div class="mb-16"> 
+                            <div class="flex items-center mb-6"> 
+                                <div class="w-14 h-14 rounded-full bg-gradient-to-r from-accent to-accent-glow flex items-center justify-center text-black font-bold text-xl mr-6">4</div>                                 
+                                <h3 class="text-2xl font-bold">Engineering Excellence</h3> 
+                            </div>                             
+                            <p class="text-gray-300 pl-20"> 
+                            Our development team builds your custom solution using modern, performance-optimized code that ensures lightning-fast load times and flawless functionality. </p> 
+                        </div>                         
+                        <div class="mb-16"> 
+                            <div class="flex items-center mb-6"> 
+                                <div class="w-14 h-14 rounded-full bg-gradient-to-r from-accent to-accent-glow flex items-center justify-center text-black font-bold text-xl mr-6">5</div>                                 
+                                <h3 class="text-2xl font-bold">Quality Assurance</h3> 
+                            </div>                             
+                            <p class="text-gray-300 pl-20"> 
+                            Rigorous testing across devices, browsers, and user scenarios ensures your digital experience performs flawlessly in all conditions before launch. </p> 
+                        </div>                         
+                        <div> 
+                            <div class="flex items-center mb-6"> 
+                                <div class="w-14 h-14 rounded-full bg-gradient-to-r from-accent to-accent-glow flex items-center justify-center text-black font-bold text-xl mr-6">6</div>                                 
+                                <h3 class="text-2xl font-bold">Launch & Evolution</h3> 
+                            </div>                             
+                            <p class="text-gray-300 pl-20"> 
+                            We execute a seamless launch and provide ongoing support to ensure your digital presence continues to evolve and deliver results for years to come. </p> 
+                        </div>                         
+                    </div>                     
+                </div>                 
+            </div>             
+        </section>         
+        <!-- CTA Banner Section -->         
+        <section class="py-20 px-6 relative"> 
+            <div class="container mx-auto max-w-6xl"> 
+                <div class="cta-banner p-16 md:p-20"> 
+                    <div class="text-center"> 
+                        <h2 class="text-3xl md:text-5xl font-bold mb-10">Ready to Command Attention?</h2> 
+                        <div class="flex flex-col md:flex-row justify-center gap-8"> <a href="#contact" class="btn-primary py-5 px-12 rounded-full font-medium inline-block text-center text-lg"> 
+                            Book a Studio Consultation </a> <a href="https://vtjptovw.gensparkspace.com" target="_blank" class="btn-outline py-5 px-12 rounded-full font-medium inline-block text-center text-lg"> 
+                            Browse Modular Frameworks → </a> 
+                        </div>                         
+                    </div>                     
+                </div>                 
+            </div>             
+        </section>         
+        <!-- Testimonials Section -->         
+        <section id="testimonials" class="py-28 px-6 bg-black bg-opacity-40 relative"> 
+            <div class="container mx-auto max-w-6xl"> 
+                <div class="text-center mb-20"> 
+                    <h2 class="text-3xl md:text-5xl font-bold mb-8 section-title active">Client Success Stories</h2> 
+                    <p class="text-xl text-gray-300 max-w-3xl mx-auto"> 
+                    Our work has empowered elite brands across industries to transform their digital presence
+                    and achieve remarkable results. </p> 
+                </div>                 
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10"> 
+                    <!-- Testimonial 1 -->                     
+                    <div class="card p-10 rounded-xl"> 
+                        <div class="mb-8"> 
+                            <div class="flex mb-5"> <i class="fas fa-star text-gold"></i> <i class="fas fa-star text-gold"></i> <i class="fas fa-star text-gold"></i> <i class="fas fa-star text-gold"></i> <i class="fas fa-star text-gold"></i> 
+                            </div>                             
+                            <p class="text-gray-300 italic mb-8 text-lg"> 
+                            "Clarity Systems transformed our digital presence with a sophisticated platform that perfectly captures our brand position in the luxury real estate market. Inquiries from qualified buyers increased by 140% within the first month." </p> 
+                        </div>                         
+                        <div class="flex items-center"> 
+                            <div class="w-14 h-14 rounded-full bg-gradient-to-r from-gold to-gold-light flex items-center justify-center text-black font-bold text-xl mr-5">A</div>                             
+                            <div> 
+                                <h4 class="font-bold text-lg">Alexandra Reynolds</h4> 
+                                <p class="text-sm text-gray-400">Founder, Prestige Properties</p> 
+                            </div>                             
+                        </div>                         
+                    </div>                     
+                    <!-- Testimonial 2 -->                     
+                    <div class="card p-10 rounded-xl"> 
+                        <div class="mb-8"> 
+                            <div class="flex mb-5"> <i class="fas fa-star text-gold"></i> <i class="fas fa-star text-gold"></i> <i class="fas fa-star text-gold"></i> <i class="fas fa-star text-gold"></i> <i class="fas fa-star text-gold"></i> 
+                            </div>                             
+                            <p class="text-gray-300 italic mb-8 text-lg"> 
+                            "The team at Clarity Systems understands that exceptional design must drive business results. Our new platform reduced customer acquisition costs by 32% while elevating our brand perception to compete with industry leaders." </p> 
+                        </div>                         
+                        <div class="flex items-center"> 
+                            <div class="w-14 h-14 rounded-full bg-gradient-to-r from-gold to-gold-light flex items-center justify-center text-black font-bold text-xl mr-5">M</div>                             
+                            <div> 
+                                <h4 class="font-bold text-lg">Marcus Chen</h4> 
+                                <p class="text-sm text-gray-400">CEO, Nexus Ventures</p> 
+                            </div>                             
+                        </div>                         
+                    </div>                     
+                    <!-- Testimonial 3 -->                     
+                    <div class="card p-10 rounded-xl"> 
+                        <div class="mb-8"> 
+                            <div class="flex mb-5"> <i class="fas fa-star text-gold"></i> <i class="fas fa-star text-gold"></i> <i class="fas fa-star text-gold"></i> <i class="fas fa-star text-gold"></i> <i class="fas fa-star text-gold"></i> 
+                            </div>                             
+                            <p class="text-gray-300 italic mb-8 text-lg"> 
+                            "Working with Clarity Systems was transformative for our business. Their approach combines strategic insight with flawless execution. Our booking conversion rates increased by 87%, and the platform has become central to our brand identity." </p> 
+                        </div>                         
+                        <div class="flex items-center"> 
+                            <div class="w-14 h-14 rounded-full bg-gradient-to-r from-gold to-gold-light flex items-center justify-center text-black font-bold text-xl mr-5">J</div>                             
+                            <div> 
+                                <h4 class="font-bold text-lg">Janelle Miyamoto</h4> 
+                                <p class="text-sm text-gray-400">Director, Celestia Retreats</p> 
+                            </div>                             
+                        </div>                         
+                    </div>                     
+                </div>                 
+            </div>             
+        </section>         
+        <!-- Contact Section -->         
+        <section id="contact" class="py-28 px-6 relative"> 
+            <div class="container mx-auto max-w-5xl"> 
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-16"> 
+                    <div> 
+                        <h2 class="text-3xl md:text-5xl font-bold mb-8 section-title active">Begin Your Journey</h2> 
+                        <p class="text-xl text-gray-300 mb-10"> 
+                        Transform your digital presence with a studio-grade website engineered for performance and results. </p> 
+                        <div class="mb-12"> 
+                            <h3 class="text-2xl font-bold mb-6 gradient-text">Studio-Grade Build</h3> 
+                            <p class="text-gray-300 mb-3 text-lg">• Custom design & development</p> 
+                            <p class="text-gray-300 mb-3 text-lg">• Strategic UX architecture</p> 
+                            <p class="text-gray-300 mb-3 text-lg">• Performance engineering</p> 
+                            <p class="text-gray-300 mb-3 text-lg">• Content management systems</p> 
+                            <p class="text-gray-300 mb-3 text-lg">• Launch & support services</p> 
+                            <div class="mt-6"> <span class="text-2xl font-bold text-white">€2,500—€20,000+</span> 
+                            </div>                             
+                        </div>                         
+                        <div> 
+                            <h3 class="text-2xl font-bold mb-6">Contact Information</h3> 
+                            <div class="flex items-center mb-5"> <i class="fas fa-envelope text-gold mr-4 text-xl"></i> <span class="text-lg"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="b4c7c0c1d0dddbf4d7d8d5c6ddc0cdc7cdc7c0d1d9c79ad7dbd9">ClaritySystemsStudio@gmail.com</a></span> 
+                            </div>                             
+                            <div class="flex items-center mb-5"> <i class="fas fa-phone text-gold mr-4 text-xl"></i> <span class="text-lg">+353 089 249 3743</span> 
+                            </div>                             
+                            <div class="flex items-center"> <i class="fas fa-map-marker-alt text-gold mr-4 text-xl"></i> <span class="text-lg">25 Sandyford Blackthorn Ave.</span> 
+                            </div>                             
+                        </div>                         
+                    </div>                     
+                    <div class="card p-10 rounded-xl"> 
+                        <h3 class="text-2xl font-bold mb-8">Request a Consultation</h3> 
+                        <form action="https://formspree.io/f/xzzrqqlj" method="POST">
+                            <div class="mb-6">
+                                <label class="block text-sm font-medium text-white mb-2" for="name">Your Name</label>
+                                <input type="text" name="name" id="name" class="w-full px-4 py-3 bg-black bg-opacity-50 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold transition-colors h-12" required/>
+                            </div>
+                            <div class="mb-6">
+                                <label class="block text-sm font-medium text-white mb-2" for="email">Your Email</label>
+                                <input type="email" name="email" id="email" class="w-full px-4 py-3 bg-black bg-opacity-50 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold transition-colors h-12" required/>
+                            </div>
+                            <div class="mb-6">
+                                <label class="block text-sm font-medium text-white mb-2" for="message">Tell us about your project</label>
+                                <textarea name="message" id="message" class="w-full px-4 py-3 bg-black bg-opacity-50 border border-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-gold transition-colors h-36" placeholder="Tell us about your project..." required></textarea>
+                            </div>
+                            <button type="submit" class="w-full btn-primary py-4 px-8 rounded-lg font-medium text-lg">Submit Inquiry</button>
+                        </form>                         
+                    </div>                     
+                </div>                 
+            </div>             
+        </section>         
+        <!-- Footer -->         
+        <footer class="py-16 px-6 bg-black relative"> 
+            <div class="container mx-auto max-w-6xl"> 
+                <div class="flex flex-col md:flex-row justify-between items-center"> 
+                    <div class="mb-10 md:mb-0"> 
+                        <h3 class="text-2xl font-bold mb-4"> <span class="gradient-text">Clarity Systems</span> <span class="text-white">Studio</span> </h3> 
+                        <p class="text-gray-400">Studio-Grade Websites Engineered for Results</p> 
+                    </div>                     
+                    <div class="flex flex-col md:flex-row space-y-5 md:space-y-0 md:space-x-10"> <a href="#studio-grade-builds" class="nav-link">Studio-Grade Builds</a> <a href="#services" class="nav-link">Services</a> <a href="#approach" class="nav-link">Approach</a> <a href="#testimonials" class="nav-link">Client Success</a> <a href="#contact" class="nav-link">Contact</a> 
+                    </div>                     
+                </div>                 
+                <div class="border-t border-gray-800 mt-10 pt-10 flex flex-col md:flex-row justify-between items-center"> 
+                    <p class="text-gray-500 text-sm mb-6 md:mb-0">© 2023 Clarity Systems Studio. All rights reserved.</p> 
+                    <div class="flex space-x-8"> <a href="#" class="text-gold hover:text-gold-light transition-colors duration-300 text-xl"> <i class="fab fa-twitter"></i> </a> <a href="#" class="text-gold hover:text-gold-light transition-colors duration-300 text-xl"> <i class="fab fa-instagram"></i> </a> <a href="#" class="text-gold hover:text-gold-light transition-colors duration-300 text-xl"> <i class="fab fa-dribbble"></i> </a> <a href="#" class="text-gold hover:text-gold-light transition-colors duration-300 text-xl"> <i class="fab fa-linkedin"></i> </a> 
+                    </div>                     
+                </div>                 
+            </div>             
+        </footer>         
+        <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+        <script>
+        // Mobile Menu Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+            const mobileMenuClose = document.getElementById('mobile-menu-close');
+            const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+            const sectionTitles = document.querySelectorAll('.section-title');
+            const navbar = document.getElementById('navbar');
+            
+            // Activate section titles when they enter viewport
+            const activateSectionTitles = () => {
+                sectionTitles.forEach(title => {
+                    const rect = title.getBoundingClientRect();
+                    const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+                    
+                    if (rect.top <= windowHeight * 0.75) {
+                        title.classList.add('active');
+                    }
+                });
+            };
+            
+            // Handle navbar background on scroll
+            const handleNavbarBackground = () => {
+                if (window.scrollY > 100) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            };
+            
+            // Function to toggle mobile menu
+            function toggleMobileMenu() {
+                mobileMenu.classList.toggle('active');
+                mobileMenuOverlay.classList.toggle('active');
+                document.body.classList.toggle('overflow-hidden');
+                
+                // Change hamburger icon to close icon and vice versa
+                if (mobileMenu.classList.contains('active')) {
+                    mobileMenuButton.innerHTML = '<i class="fas fa-times"></i>';
+                } else {
+                    mobileMenuButton.innerHTML = '<i class="fas fa-bars"></i>';
+                }
+            }
+            
+            // Open mobile menu when hamburger is clicked
+            mobileMenuButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                toggleMobileMenu();
+            });
+            
+            // Close mobile menu when X is clicked
+            mobileMenuClose.addEventListener('click', function() {
+                toggleMobileMenu();
+            });
+            
+            // Close mobile menu when clicking overlay
+            mobileMenuOverlay.addEventListener('click', function() {
+                toggleMobileMenu();
+            });
+            
+            // Close mobile menu when clicking on a navigation link
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    toggleMobileMenu();
+                    
+                    // Smooth scroll to section
+                    setTimeout(() => {
+                        const targetElement = document.querySelector(targetId);
+                        if (targetElement) {
+                            window.scrollTo({
+                                top: targetElement.offsetTop - 80, // Adjust for header height
+                                behavior: 'smooth'
+                            });
+                        }
+                    }, 300); // Short delay to allow menu to close
+                });
+            });
+            
+            // Smooth scrolling for all anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    if (this.getAttribute('href') === '#') return;
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    
+                    if (targetElement) {
+                        e.preventDefault();
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80, // Adjust for header height
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Listen for scroll events
+            window.addEventListener('scroll', function() {
+                activateSectionTitles();
+                handleNavbarBackground();
+            });
+            
+            // Run once on load
+            activateSectionTitles();
+            handleNavbarBackground();
+        });
+    </script>         
+    </body>     
+</html> 
+<script id="html_badge_script1">
+        window.__genspark_remove_badge_link = "https://www.genspark.ai/api/html_badge/" +
+            "remove_badge?token=To%2FBnjzloZ3UfQdcSaYfDsoTp5UEwgd%2Bsm1FsIG18%2BVkNZAh810VxfbX%2B1op7fOK%2FX0FONcEmWvEsCcs7Zdem3ZY3ht3G58C9QabcIljyHjGiK%2BL2FYvWmYcZ8XRbA7TNmdwiCRdy65YDLV2WpxkklUY5IjuPSFtLlbcvfi%2Bc3OuMlMlR%2F78U33REPDlx1PB%2B094xk%2FDsCDofY232W7clUo0%2BTYTGJOolF0%2B0a2QDdrdxVaNFN7d%2BAvXInqq2neg68pkkDcueccfHrfUn5QhCh9U0mEvebtfXkw0j1XXkT3cFhlCiP%2BbD88ZHDpz55qV%2FrL7KRWDkpx2ERxT1xmvjkPl6TNfKM0aUze1l6BkKLNhaxwyx%2FcM3iBG6llsbIYYdi8zRsgjkcGMH5uWVAfcJltR2zKCafqSQVJcj0qUFZcvcgOT2CxiHAQFbo%2BhsldMJZ3ehehCfftbb%2Bi5izQGAKAGPPOhMfLf5bsJOf%2Fl2X1%2FHuV5aF2FCrmNaxs3gHYzVj4m%2B46WVtRGObS6SNxlccNoNfj9VYhwwcodVmsgc3g%3D";
+        window.__genspark_locale = "en-US";
+        window.__genspark_token = "To/BnjzloZ3UfQdcSaYfDsoTp5UEwgd+sm1FsIG18+VkNZAh810VxfbX+1op7fOK/X0FONcEmWvEsCcs7Zdem3ZY3ht3G58C9QabcIljyHjGiK+L2FYvWmYcZ8XRbA7TNmdwiCRdy65YDLV2WpxkklUY5IjuPSFtLlbcvfi+c3OuMlMlR/78U33REPDlx1PB+094xk/DsCDofY232W7clUo0+TYTGJOolF0+0a2QDdrdxVaNFN7d+AvXInqq2neg68pkkDcueccfHrfUn5QhCh9U0mEvebtfXkw0j1XXkT3cFhlCiP+bD88ZHDpz55qV/rL7KRWDkpx2ERxT1xmvjkPl6TNfKM0aUze1l6BkKLNhaxwyx/cM3iBG6llsbIYYdi8zRsgjkcGMH5uWVAfcJltR2zKCafqSQVJcj0qUFZcvcgOT2CxiHAQFbo+hsldMJZ3ehehCfftbb+i5izQGAKAGPPOhMfLf5bsJOf/l2X1/HuV5aF2FCrmNaxs3gHYzVj4m+46WVtRGObS6SNxlccNoNfj9VYhwwcodVmsgc3g=";
+    </script> 
+<script id="html_notice_dialog_script" src="https://www.genspark.ai/notice_dialog.js"></script>
